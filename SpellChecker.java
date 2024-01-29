@@ -12,10 +12,12 @@ public class SpellChecker {
 
 	public static String tail(String str) {
 		// Your code goes here
+		return null;
 	}
 
 	public static int levenshtein(String word1, String word2) {
 		// Your code goes here
+		return 0;
 	}
 
 	public static String[] readDictionary(String fileName) {
@@ -30,6 +32,7 @@ public class SpellChecker {
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
 		// Your code goes here
+		return null;
 	}
 
 }
