@@ -50,19 +50,19 @@ public class SpellChecker {
 	}
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
-		int minLev= threshold;
-		String minLevWord = "";
-		for(int i = 0; i<dictionary.length; i++){
-			int currentLev= levenshtein(word.toLowerCase(),dictionary[i]);
+		int minLev= levenshtein(word,dictionary[0]);
+		String minLevWord = dictionary[0];
+		for(int i =0; i<dictionary.length; i++){
+			int currentLev= levenshtein(word,dictionary[i]);
 			if(currentLev<=minLev){
 				minLev= currentLev;
 				minLevWord = dictionary[i];
 			}
 		}
-		if(minLevWord == ""){
-			return word;
+		if(minLev<=threshold){
+			return minLevWord;
 		}
-		return minLevWord;
+		return word;
 	}
 
 }
