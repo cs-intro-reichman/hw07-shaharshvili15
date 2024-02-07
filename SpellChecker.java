@@ -54,7 +54,7 @@ public class SpellChecker {
 		String minLevWord = dictionary[0];
 		for(int i =0; i<dictionary.length; i++){
 			int currentLev= levenshtein(word,dictionary[i]);
-			if(currentLev<=minLev){
+			if(currentLev<minLev){
 				minLev= currentLev;
 				minLevWord = dictionary[i];
 			}
